@@ -39,10 +39,8 @@ function newBoardSize(){
 }
 
 function verifyInput(num){
-    if(isNaN(num) || num > 100){
-        do{
-            num = prompt("Please enter a valid number up to 100.");
-        } while(isNaN(num) || num > 100);
+    while(isNaN(num) || num > 100){
+        num = prompt("Please enter a valid number up to 100.");
     }
     return num;
 }
