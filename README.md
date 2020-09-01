@@ -1,0 +1,1 @@
+Simple Etch a Sketch program which allows users to draw by hovering their mouse over the drawing board
