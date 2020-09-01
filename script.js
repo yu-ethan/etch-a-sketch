@@ -32,9 +32,19 @@ function deleteGrid(){
 }
 
 function newBoardSize(){
-    grid = prompt("Enter a new board size, x. The board will be 'x by x'.");
+    let num = prompt("Enter a new board size, x. The board will be 'x by x'.");
+    grid = verifyInput(num);
     deleteGrid();
     createGrid();
+}
+
+function verifyInput(num){
+    if(isNaN(num) || num > 100){
+        do{
+            num = prompt("Please enter a valid number up to 100.");
+        } while(isNaN(num) || num > 100);
+    }
+    return num;
 }
 
 function reset(){
